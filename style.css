@@ -92,4 +92,47 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
+.titulo h2 {
+    font-size: 40px;
+
+    margin: 15px 0;
+}
+
+.titulo p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+/* =============================== */
+/* SOBRE NÓS */
+/* =============================== */
+
+.sobre {
+    background-color: #171717;
+
+    color: white;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.sobre-conteudo {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+
+
 
