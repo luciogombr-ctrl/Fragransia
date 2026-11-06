@@ -275,6 +275,32 @@ nav a:hover {
     font-size: 20px;
 }
 
+/* =============================== */
+/* CHATBOT */
+/* =============================== */
+
+.chatbot {
+    background-color: #eeeeee;
+
+    min-height: 700px;
+}
+
+
+.chat {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
 
 
 
