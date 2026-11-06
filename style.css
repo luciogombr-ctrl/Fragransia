@@ -190,6 +190,24 @@ nav a:hover {
     text-align: center;
 }
 
+.simbolo {
+    font-size: 100px;
+
+    margin-bottom: 20px;
+}
+
+
+.sobre-destaque h2 {
+    font-size: 28px;
+}
+
+
+.sobre-destaque p {
+    color: #aaa;
+
+    margin-top: 10px;
+}
+
 
 
 
