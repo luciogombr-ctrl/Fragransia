@@ -365,3 +365,60 @@ nav a:hover {
     white-space: pre-wrap;
 }
 
+/* ÁREA DE ENTRADA */
+
+.entrada-container {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+    background-color: white;
+}
+
+
+.entrada-container input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.entrada-container input:focus {
+    border-color: #d4a017;
+}
+
+
+.entrada-container button {
+    padding: 13px 22px;
+
+    background-color: #171717;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.entrada-container button:hover {
+    background-color: #d4a017;
+
+    color: #111;
+}
