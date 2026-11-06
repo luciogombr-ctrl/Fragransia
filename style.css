@@ -302,5 +302,51 @@ nav a:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* CABEÇALHO DO CHAT */
+
+.chat-topo {
+    background-color: #171717;
+
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.chat-avatar {
+    width: 50px;
+
+    height: 50px;
+
+    background-color: #d4a017;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+}
+
+
+.chat-topo h3 {
+    margin-bottom: 5px;
+}
+
+
+.chat-topo span {
+    color: #25d366;
+
+    font-size: 13px;
+}
 
 
