@@ -143,6 +143,32 @@ nav a:hover {
     margin: 20px 0;
 }
 
+.sobre-texto p {
+    color: #ccc;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    background-color: #d4a017;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
 
 
 
