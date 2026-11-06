@@ -422,3 +422,18 @@ nav a:hover {
 
     color: #111;
 }
+
+/* =============================== */
+/* RODAPÉ */
+/* =============================== */
+
+footer {
+    background-color: #111;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
