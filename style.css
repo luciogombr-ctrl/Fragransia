@@ -349,4 +349,19 @@ nav a:hover {
     font-size: 13px;
 }
 
+/* ÁREA DE RESPOSTA */
+
+.resultado {
+    height: 350px;
+
+    padding: 20px;
+
+    background-color: #f5f5f5;
+
+    line-height: 1.6;
+
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+}
 
