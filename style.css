@@ -225,5 +225,56 @@ nav a:hover {
     gap: 25px;
 }
 
+.servico {
+    background-color: #f8f8f8;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    border: 1px solid #e5e5e5;
+
+    transition: 0.3s;
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.servico-icone {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.servico h3 {
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+
+.servico p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.servico strong {
+    color: #b18400;
+
+    font-size: 20px;
+}
+
+
 
 
