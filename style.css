@@ -437,3 +437,65 @@ footer {
     padding: 25px;
 }
 
+/* =============================== */
+/* RESPONSIVIDADE */
+/* =============================== */
+
+@media (max-width: 900px) {
+
+    .sobre-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav {
+        gap: 15px;
+    }
+
+
+    .sobre-texto h1 {
+        font-size: 38px;
+    }
+
+
+    .sobre-destaque {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .entrada-container {
+        flex-direction: column;
+    }
+
+
+    .entrada-container button {
+        width: 100%;
+    }
+
+}
+
