@@ -132,6 +132,17 @@ nav a:hover {
     gap: 60px;
 }
 
+.sobre-texto {
+    max-width: 600px;
+}
+
+
+.sobre-texto h1 {
+    font-size: 52px;
+
+    margin: 20px 0;
+}
+
 
 
 
