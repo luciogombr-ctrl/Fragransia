@@ -14,3 +14,27 @@ body {
     color: #222;
     background-color: #f5f5f5;
 }
+
+/* =============================== */
+/* CABEÇALHO */
+/* =============================== */
+
+header {
+    background-color: #111;
+
+    color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
