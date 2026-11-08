@@ -6,102 +6,87 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoEnviar = document.getElementById('enviarMensagem');
     const areaResposta = document.getElementById('resposta');
 
+    // Histórico enviado à IA (últimas mensagens dão contexto à conversa)
+    const historico = [];
+
     // --------------------------------------------------
-    // Base de Conhecimento do Chatbot (Fragransia)
+    // Respostas de reserva: usadas só se a IA estiver indisponível
     // --------------------------------------------------
     const respostasBot = [
-        {
-            palavras: ['preco', 'precos', 'valor', 'valores', 'quanto custa', 'tabela'],
-            resposta: 'Nossa tabela de criações exclusivas:\n' +
-                      '• Fragrâncias Masculinas: R$ 40,00\n' +
-                      '• Amadeirados & Notas de Fundo: R$ 30,00\n' +
-                      '• Duo Assinatura (Perfume & Elixir): R$ 60,00\n' +
-                      '• Kit Presença Absoluta (Premium): R$ 80,00'
-        },
-        {
-            palavras: ['masculino', 'masculina', 'homem', 'classica'],
-            resposta: 'Nossa linha de Fragrâncias Masculinas (R$ 40,00) reúne acordes clássicos e modernos, lapidados para destacar presença e identidade única.'
-        },
-        {
-            palavras: ['madeira', 'amadeirado', 'amadeirados', 'patchouli', 'carvalho'],
-            resposta: 'Os Amadeirados & Notas de Fundo (R$ 30,00) trazem a nobreza do carvalho e do patchouli, garantindo alta fixação e sobriedade.'
-        },
-        {
-            palavras: ['duo', 'barba', 'elixir', 'combinacao'],
-            resposta: 'O Duo Assinatura (R$ 60,00) inclui nosso perfume exclusivo combinado ao elixir de tratamento e perfume para barba.'
-        },
-        {
-            palavras: ['premium', 'pacote', 'completo', 'kit'],
-            resposta: 'O Pacote Premium (R$ 80,00) é o Kit Presença Absoluta: reúne perfume de nicho, cuidados faciais e assinatura olfativa de longa duração.'
-        },
-        {
-            palavras: ['sobre', 'historia', 'origem', '1994', 'tradicao'],
-            resposta: 'A Fragransia marca presenças desde 1994, combinando o rigor da perfumaria artesanal à elegância atemporal.'
-        },
-        {
-            palavras: ['comprar', 'pedido', 'encomenda', 'atendimento', 'contato'],
-            resposta: 'Você pode escolher um dos nossos serviços acima ou nos dizer qual perfil de fragrância você procura para montarmos sua assinatura olfativa personalizada!'
-        },
-        {
-            palavras: ['ola', 'olá', 'oi', 'bom dia', 'boa tarde', 'boa noite'],
-            resposta: 'Olá! Seja muito bem-vindo à Fragransia. Como posso guiar sua escolha aromática hoje?'
-        }
+        { palavras: ['preco', 'precos', 'valor', 'valores', 'quanto custa', 'tabela'],
+          resposta: 'Nossa tabela:\n• Fragrâncias Masculinas: R$ 40,00\n• Amadeirados & Notas de Fundo: R$ 30,00\n• Duo Assinatura (Perfume & Elixir de Barba): R$ 60,00\n• Pacote Premium (Kit Presença Absoluta): R$ 80,00' },
+        { palavras: ['masculino', 'masculina', 'homem', 'classica'],
+          resposta: 'Nossas Fragrâncias Masculinas (R$ 40,00) reúnem acordes clássicos e contemporâneos.' },
+        { palavras: ['madeira', 'amadeirado', 'amadeirados', 'patchouli', 'carvalho'],
+          resposta: 'Os Amadeirados & Notas de Fundo (R$ 30,00) trazem carvalho e patchouli.' },
+        { palavras: ['duo', 'barba', 'elixir'],
+          resposta: 'O Duo Assinatura (R$ 60,00) combina perfume e elixir de barba.' },
+        { palavras: ['premium', 'pacote', 'kit'],
+          resposta: 'O Pacote Premium (R$ 80,00) é o Kit Presença Absoluta: perfume de nicho, cuidados faciais e assinatura olfativa.' },
+        { palavras: ['ola', 'oi', 'bom dia', 'boa tarde', 'boa noite'],
+          resposta: 'Olá! Seja bem-vindo à Fragransia. Como posso ajudar na sua escolha?' }
     ];
+
+    function respostaReserva(texto) {
+        const t = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        for (const item of respostasBot) {
+            if (item.palavras.some(p => t.includes(p))) return item.resposta;
+        }
+        return 'Estou com instabilidade agora. Você pode ver os valores nos cards acima ou falar pelo WhatsApp (86) 99865-6925.';
+    }
 
     // --------------------------------------------------
     // Funções do Chat
     // --------------------------------------------------
-
     function adicionarMensagem(autor, texto) {
         const bloco = document.createElement('div');
         bloco.style.marginBottom = '14px';
 
-        if (autor === 'voce') {
-            bloco.innerHTML = `<strong>Você:</strong>\n${texto}`;
-            bloco.style.color = '#111';
-        } else {
-            bloco.innerHTML = `<strong>Assistente Fragransia 🏺:</strong>\n${texto}`;
-            bloco.style.color = '#2d5a0b';
-        }
+        const nome = document.createElement('strong');
+        nome.textContent = autor === 'voce' ? 'Você:' : 'Aurélio 🏺:';
+        bloco.appendChild(nome);
+        bloco.appendChild(document.createTextNode('\n' + texto));
+        bloco.style.color = autor === 'voce' ? '#111' : '#2d5a0b';
 
         areaResposta.appendChild(bloco);
         areaResposta.scrollTop = areaResposta.scrollHeight;
+        return bloco;
     }
 
-    function processarPergunta(textoUsuario) {
-        const textoNormalizado = textoUsuario
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '');
-
-        for (const item of respostasBot) {
-            const encontrou = item.palavras.some(termo => textoNormalizado.includes(termo));
-            if (encontrou) {
-                return item.resposta;
-            }
-        }
-
-        return 'Compreendo perfeitamente. Trabalhamos com essências sob medida, masculinas, amadeiradas e kits completos. Deseja conhecer os valores ou os detalhes de algum serviço específico?';
-    }
-
-    function enviarMensagem() {
+    async function enviarMensagem() {
         const mensagem = inputMensagem.value.trim();
         if (!mensagem) return;
 
-        // Renderiza mensagem do cliente
         adicionarMensagem('voce', mensagem);
         inputMensagem.value = '';
+        historico.push({ role: 'user', content: mensagem });
 
-        // Simula tempo de resposta elegante do bot
-        setTimeout(() => {
-            const resposta = processarPergunta(mensagem);
-            adicionarMensagem('bot', resposta);
-        }, 450);
+        botaoEnviar.disabled = true;
+        const espera = adicionarMensagem('bot', 'preparando a resposta...');
+
+        try {
+            const r = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ messages: historico.slice(-10) })
+            });
+            const dados = await r.json();
+            if (!r.ok) throw new Error(dados.erro || 'Falha no servidor');
+            espera.remove();
+            adicionarMensagem('bot', dados.resposta);
+            historico.push({ role: 'assistant', content: dados.resposta });
+        } catch (err) {
+            console.error(err);
+            espera.remove();
+            historico.pop();
+            adicionarMensagem('bot', respostaReserva(mensagem));
+        } finally {
+            botaoEnviar.disabled = false;
+            inputMensagem.focus();
+        }
     }
 
-    // Eventos de clique e teclado
     botaoEnviar.addEventListener('click', enviarMensagem);
-
     inputMensagem.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -110,17 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --------------------------------------------------
-    // Integração: Clicar nos cards de serviços envia pergunta ao bot
+    // Clicar nos cards de serviços leva a dúvida ao assistente
     // --------------------------------------------------
-    const cardsServicos = document.querySelectorAll('.servico');
-    cardsServicos.forEach(card => {
+    document.querySelectorAll('.servico').forEach(card => {
         card.style.cursor = 'pointer';
         card.addEventListener('click', () => {
             const nomeServico = card.querySelector('h3')?.innerText || '';
-            const secaoChat = document.getElementById('chatbot');
-            
             if (nomeServico) {
-                secaoChat.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('chatbot').scrollIntoView({ behavior: 'smooth' });
                 inputMensagem.value = `Gostaria de saber mais sobre: ${nomeServico}`;
                 inputMensagem.focus();
             }
