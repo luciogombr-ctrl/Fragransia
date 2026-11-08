@@ -21,6 +21,7 @@
             <a href="#sobre">Sobre Nós</a>
             <a href="#servicos">Serviços</a>
             <a href="#chatbot">Chatbot</a>
+            <a href="#contato">Contato</a>
         </nav>
 
     </header>
@@ -275,6 +276,96 @@
 
 
     <!-- =============================== -->
+    <!-- SEÇÃO 4 - CONTATO -->
+    <!-- =============================== -->
+
+    <section id="contato" class="contato">
+
+        <div class="titulo">
+
+            <span class="destaque">
+                FALE CONOSCO
+            </span>
+
+            <h2>
+                Entre em Contato
+            </h2>
+
+            <p>
+                Dúvidas sobre nossas fórmulas ou encomendas personalizadas? Envie sua mensagem.
+            </p>
+
+        </div>
+
+        <div class="contato-container">
+
+            <div class="contato-info">
+
+                <div class="info-item">
+                    <span class="info-icone">📍</span>
+                    <div>
+                        <h4>Atelier & Boutique</h4>
+                        <p>Atendimento exclusivo com hora marcada</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icone">✉️</span>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p>contato@fragransia.com.br</p>
+                    </div>
+                </div>
+
+                <!-- CARD COM LINK DIRETO PARA O WHATSAPP -->
+                <a 
+                    href="https://wa.me/5586998656925?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20fragr%C3%A2ncias%20da%20Fragransia!" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="link-zap"
+                >
+                    <div class="info-item item-zap">
+                        <span class="info-icone">📱</span>
+                        <div>
+                            <h4>WhatsApp Direto</h4>
+                            <p>(86) 99865-6925 — Clique para iniciar conversa</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <form id="formContato" class="contato-form">
+
+                <div class="form-grupo">
+                    <label for="nomeContato">Nome Completo</label>
+                    <input type="text" id="nomeContato" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="emailContato">E-mail</label>
+                    <input type="email" id="emailContato" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="mensagemContato">Mensagem</label>
+                    <textarea id="mensagemContato" rows="4" placeholder="Como podemos ajudar com sua fragrância?" required></textarea>
+                </div>
+
+                <button type="submit" id="btnEnviarContato" class="botao-contato">
+                    Enviar Mensagem
+                </button>
+
+                <div id="statusContato" class="status-contato"></div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =============================== -->
     <!-- RODAPÉ -->
     <!-- =============================== -->
 
@@ -282,11 +373,11 @@
 
         <p>
             © 2026 Fragransia — Perfumaria & Cosméticos Exclusivos. Todos os direitos reservados.
-            
         </p>
 
     </footer>
 
+    <script src="script.js"></script>
 
 </body>
 </html>
