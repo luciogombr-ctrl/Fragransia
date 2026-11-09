@@ -7,10 +7,7 @@ Landing page institucional e interativa desenvolvida para a marca **Fragransia**
 ## 📸 Demonstração do Projeto
 
 <!-- Substitua o caminho abaixo pela captura do seu projeto -->
-![Preview da Landing Page Fragransia](https://github.com/luciogombr-ctrl/Fragransia/blob/main/Screenshot%202026-11-08%20at%2016-10-42%20Fragransia.png)
-![Preview da Landing Page Fragransia](https://github.com/luciogombr-ctrl/Fragransia/blob/main/Screenshot%202026-11-08%20at%2016-10-58%20Fragransia.png)
-![Preview da Landing Page Fragransia](https://github.com/luciogombr-ctrl/Fragransia/blob/main/Screenshot%202026-11-08%20at%2016-11-11%20Fragransia.png)
-![Preview da Landing Page Fragransia](https://github.com/luciogombr-ctrl/Fragransia/blob/main/Screenshot%202026-11-08%20at%2016-11-18%20Fragransia.png)
+![Preview da Landing Page Fragransia](assets/preview-landing.png)
 
 ---
 

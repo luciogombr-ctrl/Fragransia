@@ -8,7 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     color: #222;
@@ -21,44 +20,30 @@ body {
 
 header {
     background-color: #111;
-
     color: white;
-
     padding: 20px 8%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 }
 
 .logo {
     font-size: 24px;
-
     font-weight: bold;
 }
 
-
 nav {
     display: flex;
-
     gap: 30px;
 }
 
 nav a {
     color: white;
-
     text-decoration: none;
-
     font-size: 16px;
-
     transition: 0.3s;
 }
 
@@ -72,35 +57,30 @@ nav a:hover {
 
 .sobre,
 .servicos,
-.chatbot {
+.chatbot,
+.contato {
     padding: 80px 8%;
 }
 
 .destaque {
     color: #d4a017;
-
     font-size: 14px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
 }
 
 .titulo {
     text-align: center;
-
     margin-bottom: 50px;
 }
 
 .titulo h2 {
     font-size: 40px;
-
     margin: 15px 0;
 }
 
 .titulo p {
     color: #666;
-
     line-height: 1.6;
 }
 
@@ -110,25 +90,17 @@ nav a:hover {
 
 .sobre {
     background-color: #171717;
-
     color: white;
-
     min-height: 600px;
-
     display: flex;
-
     align-items: center;
 }
 
 .sobre-conteudo {
     width: 100%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 60px;
 }
 
@@ -136,75 +108,51 @@ nav a:hover {
     max-width: 600px;
 }
 
-
 .sobre-texto h1 {
     font-size: 52px;
-
     margin: 20px 0;
 }
 
 .sobre-texto p {
     color: #ccc;
-
     line-height: 1.7;
-
     margin-bottom: 15px;
 }
 
 .botao {
     display: inline-block;
-
     margin-top: 20px;
-
     padding: 14px 25px;
-
     background-color: #d4a017;
-
     color: #111;
-
     text-decoration: none;
-
     font-weight: bold;
-
     border-radius: 5px;
 }
 
-
 .sobre-destaque {
     width: 400px;
-
     height: 400px;
-
     background-color: #222;
-
     border: 1px solid #444;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
 }
 
 .simbolo {
     font-size: 100px;
-
     margin-bottom: 20px;
 }
-
 
 .sobre-destaque h2 {
     font-size: 28px;
 }
 
-
 .sobre-destaque p {
     color: #aaa;
-
     margin-top: 10px;
 }
 
@@ -216,62 +164,44 @@ nav a:hover {
     background-color: white;
 }
 
-
 .servicos-container {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 25px;
 }
 
 .servico {
     background-color: #f8f8f8;
-
     padding: 30px 25px;
-
     text-align: center;
-
     border-radius: 8px;
-
     border: 1px solid #e5e5e5;
-
     transition: 0.3s;
 }
 
 .servico:hover {
     transform: translateY(-5px);
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .servico-icone {
     font-size: 45px;
-
     margin-bottom: 15px;
 }
-
 
 .servico h3 {
     font-size: 21px;
-
     margin-bottom: 15px;
 }
 
-
 .servico p {
     color: #666;
-
     line-height: 1.6;
-
     margin-bottom: 20px;
 }
 
-
 .servico strong {
     color: #b18400;
-
     font-size: 20px;
 }
 
@@ -281,24 +211,16 @@ nav a:hover {
 
 .chatbot {
     background-color: #eeeeee;
-
     min-height: 700px;
 }
 
-
 .chat {
     width: 100%;
-
     max-width: 550px;
-
     margin: 0 auto;
-
     background-color: white;
-
     border-radius: 10px;
-
     overflow: hidden;
-
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -306,46 +228,30 @@ nav a:hover {
 
 .chat-topo {
     background-color: #171717;
-
     color: white;
-
     padding: 20px;
-
     display: flex;
-
     align-items: center;
-
     gap: 15px;
 }
 
-
 .chat-avatar {
     width: 50px;
-
     height: 50px;
-
     background-color: #d4a017;
-
     border-radius: 50%;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     font-size: 25px;
 }
-
 
 .chat-topo h3 {
     margin-bottom: 5px;
 }
 
-
 .chat-topo span {
     color: #25d366;
-
     font-size: 13px;
 }
 
@@ -353,15 +259,10 @@ nav a:hover {
 
 .resultado {
     height: 350px;
-
     padding: 20px;
-
     background-color: #f5f5f5;
-
     line-height: 1.6;
-
     overflow-y: auto;
-
     white-space: pre-wrap;
 }
 
@@ -369,58 +270,177 @@ nav a:hover {
 
 .entrada-container {
     display: flex;
-
     gap: 10px;
-
     padding: 15px;
-
     border-top: 1px solid #ddd;
-
     background-color: white;
 }
 
-
 .entrada-container input {
     flex: 1;
-
     padding: 13px;
-
     border: 1px solid #ccc;
-
     border-radius: 5px;
-
     font-size: 15px;
-
     outline: none;
 }
-
 
 .entrada-container input:focus {
     border-color: #d4a017;
 }
 
-
 .entrada-container button {
     padding: 13px 22px;
-
     background-color: #171717;
-
     color: white;
-
     border: none;
-
     border-radius: 5px;
-
     cursor: pointer;
-
     font-weight: bold;
 }
 
-
 .entrada-container button:hover {
     background-color: #d4a017;
-
     color: #111;
+}
+
+/* =============================== */
+/* CONTATO */
+/* =============================== */
+
+.contato {
+    background-color: #171717;
+    color: white;
+}
+
+.contato .titulo p {
+    color: #aaa;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contato-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.info-icone {
+    font-size: 30px;
+}
+
+.info-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #d4a017;
+}
+
+.info-item p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Link e destaque do WhatsApp */
+.link-zap {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.item-zap {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.item-zap:hover {
+    border-color: #25d366;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+}
+
+.contato-form {
+    flex: 1.2;
+    background-color: #222;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grupo label {
+    font-size: 13px;
+    color: #ddd;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    padding: 13px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #1a1a1a;
+    color: white;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: #d4a017;
+}
+
+.botao-contato {
+    padding: 14px;
+    background-color: #d4a017;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.botao-contato:hover {
+    background-color: #b18400;
+    color: white;
+}
+
+.status-contato {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+    min-height: 20px;
 }
 
 /* =============================== */
@@ -429,11 +449,8 @@ nav a:hover {
 
 footer {
     background-color: #111;
-
     color: #aaa;
-
     text-align: center;
-
     padding: 25px;
 }
 
@@ -442,60 +459,53 @@ footer {
 /* =============================== */
 
 @media (max-width: 900px) {
-
     .sobre-conteudo {
         flex-direction: column;
-
         text-align: center;
     }
-
 
     .servicos-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-}
-
-
-@media (max-width: 600px) {
-
-    header {
+    .contato-container {
         flex-direction: column;
-
-        gap: 15px;
     }
 
+    .contato-form,
+    .contato-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
 
     nav {
         gap: 15px;
     }
 
-
     .sobre-texto h1 {
         font-size: 38px;
     }
 
-
     .sobre-destaque {
         width: 100%;
-
         height: 300px;
     }
-
 
     .servicos-container {
         grid-template-columns: 1fr;
     }
 
-
     .entrada-container {
         flex-direction: column;
     }
 
-
     .entrada-container button {
         width: 100%;
     }
-
 }
-

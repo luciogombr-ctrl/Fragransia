@@ -1,0 +1,9 @@
+{
+  "name": "fragransia",
+  "version": "1.0.0",
+  "description": "Landing page da Fragransia com assistente de IA",
+  "main": "server.js",
+  "scripts": { "start": "node --env-file=.env server.js" },
+  "engines": { "node": ">=20.6" },
+  "license": "MIT"
+}
