@@ -1,0 +1,307 @@
+:root {
+    --escuro: #1F2937;
+    --dourado: #FBBF24;
+    --ambar: #F59E0B;
+    --creme-claro: #FEF9C3;
+    --branco: #ffffff;
+    --cinza: #f4f6f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Parisienne', cursive;
+}
+
+body {
+    font-family: 'Parisienne', cursive;
+    font-size: 20px;
+    background: var(--cinza);
+    color: var(--escuro);
+}
+
+.cabecalho {
+    background: var(--escuro);
+    color: var(--dourado);
+    text-align: center;
+    padding: 20px;
+}
+
+.cabecalho h1 {
+    font-size: 52px;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+.hero {
+    background-color: var(--escuro);
+    background-image: linear-gradient(rgba(31, 41, 55, 0.72), rgba(31, 41, 55, 0.72)), url("fragransia.webp");
+    background-size: cover;
+    background-position: center;
+    color: var(--branco);
+    text-align: center;
+    padding: 200px 20px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: var(--dourado);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 28px;
+    color: var(--branco);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.secao {
+    background: var(--branco);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--escuro);
+    margin-bottom: 20px;
+}
+
+.secao p {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+.container-servicos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.servico {
+    background: var(--cinza);
+    padding: 20px;
+    border-radius: 6px;
+    width: 250px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.servico h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.servico p {
+    font-size: 21px;
+}
+
+.servico:hover {
+    background: var(--creme-claro);
+    transform: translateY(-5px);
+}
+
+#form-contato {
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contato input,
+#form-contato textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Parisienne', cursive;
+    font-size: 22px;
+}
+
+#form-contato textarea {
+    resize: vertical;
+}
+
+.btn-enviarForm {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--escuro);
+    color: var(--dourado);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Parisienne', cursive;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.btn-enviarForm:hover {
+    background: var(--ambar);
+    color: var(--escuro);
+}
+
+footer {
+    background: var(--escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 21px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--dourado);
+    color: var(--escuro);
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.chat-toggle:hover {
+    background: var(--ambar);
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 330px;
+    max-width: calc(100vw - 40px);
+    background: var(--branco);
+    border: 2px solid var(--escuro);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.chat-header {
+    background: var(--escuro);
+    color: var(--dourado);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: var(--dourado);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.chat-box {
+    padding: 10px;
+    height: 320px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.usuario {
+    align-self: flex-end;
+    background: var(--creme-claro);
+    color: var(--escuro);
+    padding: 6px 10px;
+    border-radius: 6px;
+    max-width: 85%;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.bot {
+    align-self: flex-start;
+    background: var(--cinza);
+    color: var(--escuro);
+    padding: 6px 10px;
+    border-radius: 6px;
+    max-width: 85%;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.erro {
+    align-self: flex-start;
+    background: #fdecea;
+    color: #8a1c1c;
+    padding: 6px 10px;
+    border-radius: 6px;
+    max-width: 85%;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.chat-input-area {
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 8px;
+    font-family: 'Parisienne', cursive;
+    font-size: 20px;
+}
+
+.chat-input-area button {
+    background: var(--escuro);
+    color: var(--dourado);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Parisienne', cursive;
+    font-size: 20px;
+}
+
+.chat-input-area button:hover {
+    background: var(--ambar);
+    color: var(--escuro);
+}
+
+.chat-input-area button:disabled,
+.chat-input-area input:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}

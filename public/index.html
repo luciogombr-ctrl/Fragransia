@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragransia — Alta Perfumaria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Fragransia</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>A Arte da Alta Perfumaria</h2>
+            <p>Fragrâncias exclusivas criadas para marcar presença e despertar emoções.</p>
+        </section>
+
+        <section id="sobre" class="secao">
+            <h2>Sobre a Fragransia</h2>
+            <p>
+                A Fragransia une a tradição da perfumaria francesa à sofisticação contemporânea.
+                Nossas criações possuem concentração Eau de Parfum, garantindo fixação prolongada
+                e evolução única em cada pele.
+            </p>
+        </section>
+
+        <section id="catalogo" class="secao">
+            <h2>Nossa Coleção (100ml · Eau de Parfum)</h2>
+            <div class="container-servicos">
+                <article class="servico">
+                    <h3>Brisa do Atlântico</h3>
+                    <p>Frescor cítrico aromático com limão siciliano, alecrim e notas marinhas.</p>
+                    <p><strong>R$ 249,90</strong></p>
+                </article>
+
+                <article class="servico">
+                    <h3>Éclat de Rose</h3>
+                    <p>Composição floral sofisticada com pétalas de rosa damascena, peônia e almíscar branco.</p>
+                    <p><strong>R$ 329,90</strong></p>
+                </article>
+
+                <article class="servico">
+                    <h3>Fragransia Noir Intense</h3>
+                    <p>Notas amadeiradas e orientais de bergamota, cardamomo e âmbar.</p>
+                    <p><strong>R$ 389,90</strong></p>
+                </article>
+
+                <article class="servico">
+                    <h3>Velours Vanille</h3>
+                    <p>Gourmand especiado com baunilha de Madagascar, fava tonka, canela e sândalo.</p>
+                    <p><strong>R$ 449,90</strong></p>
+                </article>
+
+                <article class="servico">
+                    <h3>Oud Imperial</h3>
+                    <p>Alta perfumaria com madeira oud envelhecida, açafrão, couro nobre e incenso.</p>
+                    <p><strong>R$ 689,90</strong></p>
+                </article>
+
+                <article class="servico">
+                    <h3>Elixir d'Or Privé</h3>
+                    <p>Edição de luxo com íris florentina, âmbar cinzento, jasmim sambac e cedro.</p>
+                    <p><strong>R$ 849,90</strong></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <h2>Consultoria e Encomendas</h2>
+            <p>Preencha o formulário abaixo para falar com nossa equipe ou solicitar atendimento personalizado.</p>
+            <form id="form-contato">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <input type="text" id="assunto" placeholder="Assunto ou perfume de interesse" required>
+                <textarea id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="btn-enviarForm">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fragransia Alta Perfumaria — Avenue Frère Séraphin — 75008 Paris, França</p>
+    </footer>
+
+    <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chat">💬</button>
+
+    <aside id="chat" class="chat-widget hidden">
+        <div class="chat-header">
+            <span>Claire · Consultora Fragransia</span>
+            <button id="fechar" aria-label="Fechar chat">X</button>
+        </div>
+        <div id="chat-box" class="chat-box">
+            <div class="bot">Bonjour! Eu sou a Claire, consultora olfativa da Fragransia. Como posso ajudar você hoje?</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="input" placeholder="Digite sua mensagem...">
+            <button id="enviar">Enviar</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
