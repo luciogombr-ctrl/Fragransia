@@ -2,11 +2,12 @@ import express from "express";
 import dotenv from "dotenv";
 import fs from "fs";
 import Groq from "groq-sdk";
+import { createClient } from "@supabase/supabase-js";
 import { PERSONA, CONHECIMENTO, REGRAS } from "./persona.js";
 
 dotenv.config({ quiet: true });
 
-const PORTA = 3000;
+const PORTA = process.env.PORT || 3000;
 let modeloAtivo = "llama-3.1-8b-instant";
 
 if (!process.env.GROQ_API_KEY) {
@@ -18,6 +19,13 @@ if (!process.env.GROQ_API_KEY) {
 }
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+// Conexão com o banco de dados Supabase
+const supabase =
+  process.env.SUPABASE_URL && process.env.SUPABASE_KEY
+    ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
+    : null;
+
 const app = express();
 
 app.use(express.json());
@@ -186,8 +194,24 @@ app.post("/api/chat", async (req, res) => {
       }
     }
 
+    const respostaFinal =
+      textoFinal || "Desculpe, não consegui responder agora. Pode repetir?";
+
+    // Salva a conversa na nuvem (Supabase)
+    if (supabase) {
+      const { error } = await supabase.from("conversas").insert([
+        {
+          mensagem_cliente: mensagem,
+          resposta_bot: respostaFinal,
+        },
+      ]);
+      if (error) {
+        console.error("⚠️ Erro ao salvar no Supabase:", error.message);
+      }
+    }
+
     return res.json({
-      resposta: textoFinal || "Desculpe, não consegui responder agora. Pode repetir?",
+      resposta: respostaFinal,
     });
   } catch (erro) {
     console.error("❌ Erro ao falar com a Groq:", erro);
