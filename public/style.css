@@ -207,6 +207,7 @@ footer {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
 .hidden {
@@ -219,7 +220,10 @@ footer {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
+    align-items: center;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .chat-header button {
@@ -227,7 +231,8 @@ footer {
     border: none;
     color: var(--dourado);
     cursor: pointer;
-    font-size: 20px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 18px;
 }
 
 .chat-box {
@@ -237,62 +242,72 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-size: 20px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .usuario {
     align-self: flex-end;
     background: var(--creme-claro);
     color: var(--escuro);
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
     max-width: 85%;
     line-height: 1.4;
     white-space: pre-wrap;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .bot {
     align-self: flex-start;
     background: var(--cinza);
     color: var(--escuro);
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
     max-width: 85%;
     line-height: 1.4;
     white-space: pre-wrap;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .erro {
     align-self: flex-start;
     background: #fdecea;
     color: #8a1c1c;
-    padding: 6px 10px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
     max-width: 85%;
     line-height: 1.4;
     white-space: pre-wrap;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .chat-input-area {
     display: flex;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
 }
 
 .chat-input-area input {
     flex: 1;
-    padding: 8px;
-    font-family: 'Parisienne', cursive;
-    font-size: 20px;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
 }
 
 .chat-input-area button {
     background: var(--escuro);
     color: var(--dourado);
     border: none;
-    padding: 8px 12px;
+    padding: 8px 14px;
     cursor: pointer;
-    font-family: 'Parisienne', cursive;
-    font-size: 20px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .chat-input-area button:hover {
