@@ -314,5 +314,5 @@ footer {
 
 #chat,
 #chat * {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif !important;
+    font-family: 'Consolas', 'Courier New', monospace !important;
 }
