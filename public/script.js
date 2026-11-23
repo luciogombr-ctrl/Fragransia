@@ -93,3 +93,21 @@ async function enviar() {
     input.focus();
   }
 }
+
+// Interação dos cards do catálogo com o chat da Claire
+let cardsPerfumes = document.querySelectorAll(".servico");
+
+cardsPerfumes.forEach(function (card) {
+  card.style.cursor = "pointer";
+  card.title = "Clique para perguntar à Claire sobre esta fragrância";
+
+  card.addEventListener("click", function () {
+    // Evita disparar uma nova pergunta se a Claire ainda estiver respondendo
+    if (input.disabled) return;
+
+    let nomePerfume = card.querySelector("h3").textContent;
+    chat.classList.remove("hidden");
+    input.value = "Me fale mais sobre o perfume " + nomePerfume + " e para qual ocasião ele combina.";
+    enviar();
+  });
+});
